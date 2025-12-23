@@ -90,6 +90,8 @@ Scope {
                     Text {
                         text: root.value
                         font.pixelSize: 16
+                        Layout.preferredWidth: parent.width / 6
+                        horizontalAlignment: Text.AlignHCenter
                     }
                 }
             }
