@@ -24,8 +24,9 @@ ShellRoot {
     Connections {
         target: Pipewire.defaultAudioSink?.audio
         function onVolumeChanged() {
-            let volume = Math.round(Pipewire.defaultAudioSink?.audio.volume * 100) ?? 0;
-            osd.showOSD(OsdMode.Audio, Icons.getAudioIcon(volume), volume);
+            let node = Pipewire.defaultAudioSink;
+            let volume = Math.round(node?.audio?.volume * 100) ?? 0;
+            osd.showOSD(OsdMode.Audio, Icons.getAudioIcon(node), volume);
         }
     }
 

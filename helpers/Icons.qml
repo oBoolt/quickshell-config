@@ -1,6 +1,7 @@
 pragma Singleton
 
 import Quickshell
+import Quickshell.Services.Pipewire
 
 import QtQuick
 
@@ -163,7 +164,12 @@ Singleton {
         return root.icons.find(i => i.name == iconName)?.color ?? Colors.foreground;
     }
 
-    function getAudioIcon(volume: int): string {
+    function getAudioIcon(node: PwNode): string {
+        let muted = node?.audio?.muted;
+        let volume = Math.round(node.audio?.volume * 100) ?? 0;
+        if (muted) {
+            return "audio-volume-muted-symbolic";
+        }
         if (volume >= 66) {
             return "audio-volume-high-symbolic";
         } else if (volume >= 33) {
