@@ -16,14 +16,9 @@ Card {
     value: Math.round(laptop.percentage * 100) + "%"
     color: Icons.getColor(laptop.iconName)
 
-    Component.onCompleted: () => {
-        console.log(root.laptop.iconName);
-    }
-
     Connections {
         target: root.laptop
         function onIconNameChanged() {
-            console.log(root.laptop.iconName);
         }
     }
 }

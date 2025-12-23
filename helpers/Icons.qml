@@ -164,8 +164,6 @@ Singleton {
     }
 
     function getAudioIcon(volume: int): string {
-        console.log(volume);
-
         if (volume >= 66) {
             return "audio-volume-high-symbolic";
         } else if (volume >= 33) {
