@@ -26,12 +26,12 @@ ShellRoot {
         function onVolumeChanged() {
             let node = Pipewire.defaultAudioSink;
             let volume = Math.round(node?.audio?.volume * 100) ?? 0;
-            osd.showOSD(OsdMode.Audio, Icons.getAudioIcon(node), volume);
+            osd.showOSD(OsdMode.Audio, Audio.getAudioIcon(node), volume);
         }
         function onMutedChanged() {
             let node = Pipewire.defaultAudioSink;
             let volume = Math.round(node?.audio?.volume * 100) ?? 0;
-            osd.showOSD(OsdMode.Audio, Icons.getAudioIcon(node), volume);
+            osd.showOSD(OsdMode.Audio, Audio.getAudioIcon(node), volume);
         }
     }
 

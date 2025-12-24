@@ -12,9 +12,7 @@ Card {
     id: root
     required property PwNode node
     readonly property bool muted: node.audio?.muted
+    icon: Audio.getAudioIcon(node)
 
-    iconName: Icons.getAudioIcon(node)
-
-    // value: muted ? "Mutd" : volume + "%"
     color: muted ? Colors.red : Colors.darkaqua
 }

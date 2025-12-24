@@ -6,6 +6,7 @@ import QtQuick
 import QtQuick.Layouts
 
 import qs.settings
+import qs.helpers
 import qs.widgets.common
 import qs.widgets.bar
 
@@ -82,19 +83,19 @@ Variants {
                         node: Pipewire.defaultAudioSink
                     }
                     Card {
-                        iconName: "network-bluetooth-symbolic"
+                        icon: Icons.NetworkBluetoothSymbolic
                         color: Colors.darkblue
                     }
                     Card {
-                        iconName: "cpu"
+                        icon: Icons.CPU
                         color: Colors.red
                     }
                     Card {
-                        iconName: "network-wired-activated-symbolic"
+                        icon: Icons.NetworkWiredActivatedSymbolic
                         color: Colors.darkgreen
                     }
                     Card {
-                        iconName: "brightness-90-symbolic"
+                        icon: Icons.Brightness90Symbolic
                         color: Colors.orange
                     }
                 }

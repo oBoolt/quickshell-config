@@ -7,7 +7,7 @@ import qs.helpers
 
 Item {
     id: root
-    required property string iconName
+    required property int icon
     property color color: Colors.foreground
     property alias value: value.text
     property bool background: true
@@ -34,7 +34,7 @@ Item {
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
                 color: root.color
-                text: Icons.getIcon(root.iconName)
+                text: Icons.get(root.icon)
             }
 
             Text {

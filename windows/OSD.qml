@@ -6,7 +6,6 @@ import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
 
-import qs.types
 import qs.settings
 import qs.helpers
 import qs.widgets.common
@@ -14,11 +13,11 @@ import qs.widgets.common
 Scope {
     id: root
     property bool osdVisible: false
-    property string iconName
+    property string icon
     property string value
 
-    function showOSD(type: int, iconName: string, value: string): void {
-        root.iconName = iconName;
+    function showOSD(type: int, icon: int, value: string): void {
+        root.icon = Icons.get(icon);
         root.value = value;
 
         root.osdVisible = true;
@@ -28,7 +27,7 @@ Scope {
     IpcHandler {
         target: "osd"
         function showOSD(type: int, iconName: string, value: string): void {
-            root.showOSD(type, iconName, value);
+            root.showOSD(type, Icons.getKeyFromName, value);
         }
     }
 
@@ -68,9 +67,9 @@ Scope {
                         font.pixelSize: Variables.iconSize
                         Layout.preferredHeight: Variables.iconSize
                         Layout.preferredWidth: Variables.iconSize
-                        horizontalAlignment: Text.AlignHCenter
+                        horizontalAlignment: Text.AlignLeft
                         verticalAlignment: Text.AlignVCenter
-                        text: Icons.getIcon(root.iconName)
+                        text: root.icon
                     }
                     Rectangle {
                         id: bar

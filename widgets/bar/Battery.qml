@@ -11,14 +11,7 @@ Card {
     readonly property UPowerDevice laptop: UPower.displayDevice
 
     visible: UPower.displayDevice.isLaptopBattery
-    // icon: Icons.getIcon(laptop.iconName) ?? "󰂑"
-    iconName: laptop.iconName
+    icon: Icons.getKeyFromName(laptop.iconName)
     value: Math.round(laptop.percentage * 100) + "%"
-    color: Icons.getColor(laptop.iconName)
-
-    Connections {
-        target: root.laptop
-        function onIconNameChanged() {
-        }
-    }
+    color: Battery.getColor(Icons.getKeyFromName(laptop.iconName))
 }
