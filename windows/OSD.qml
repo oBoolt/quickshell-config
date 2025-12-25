@@ -27,7 +27,7 @@ Scope {
     IpcHandler {
         target: "osd"
         function showOSD(type: int, iconName: string, value: string): void {
-            root.showOSD(type, Icons.getKeyFromName, value);
+            root.showOSD(type, Icons.getKeyFromName(iconName), value);
         }
     }
 
