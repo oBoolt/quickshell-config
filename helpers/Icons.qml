@@ -9,10 +9,15 @@ Singleton {
         BatteryFullChargedSymbolic,
         BatteryFullChargingSymbolic,
         BatteryGoodChargingSymbolic,
+        BatteryLowChargingSymbolic,
         BatteryCautionChargingSymbolic,
+        BatteryEmptyChargingSymbolic,
         BatteryFullSymbolic,
         BatteryGoodSymbolic,
+        BatteryLowSymbolic,
         BatteryCautionSymbolic,
+        BatteryEmptySymbolic,
+        BatteryMissingSymbolic,
         AudioVolumeHighSymbolic,
         AudioVolumeMediumSymbolic,
         AudioVolumeLowSymbolic,
@@ -45,10 +50,15 @@ Singleton {
         map.set(Icons.BatteryFullChargedSymbolic, "󰁹");
         map.set(Icons.BatteryFullChargingSymbolic, "󰂄");
         map.set(Icons.BatteryGoodChargingSymbolic, "󰂄");
+        map.set(Icons.BatteryLowChargingSymbolic, "󰂄");
         map.set(Icons.BatteryCautionChargingSymbolic, "󰂄");
+        map.set(Icons.BatteryEmptyChargingSymbolic, "󰂄");
         map.set(Icons.BatteryFullSymbolic, "󰁹");
         map.set(Icons.BatteryGoodSymbolic, "󰁿");
+        map.set(Icons.BatteryLowSymbolic, "󰁻");
         map.set(Icons.BatteryCautionSymbolic, "󰂃");
+        map.set(Icons.BatteryEmptySymbolic, "󰂎");
+        map.set(Icons.BatteryMissingSymbolic, "󰂑");
         map.set(Icons.AudioVolumeHighSymbolic, "󰕾");
         map.set(Icons.AudioVolumeMediumSymbolic, "󰖀");
         map.set(Icons.AudioVolumeLowSymbolic, "󰕿");
