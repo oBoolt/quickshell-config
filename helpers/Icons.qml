@@ -88,10 +88,6 @@ Singleton {
         return map;
     }
 
-    function getColor(iconName: string): color {
-        return "white";
-    }
-
     function get(icon: int): string {
         return root.map.get(icon);
     }
